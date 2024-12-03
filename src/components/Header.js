@@ -9,6 +9,7 @@ import {
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom'; 
 import NucampLogo from '../app/assets/img/logo.png'
+import UserLoginForm from '../features/user/UserLoginForm';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false); 
@@ -16,7 +17,7 @@ const Header = () => {
     return (
         <Navbar dark color='primary' sticky='top' expland='md'>
             <NavbarBrand className='ms-5' href='/'>
-                <img src={NucampLogo} alt='nucamp logo' className='float-start'></img>
+                <img src={NucampLogo} alt='nucamp logo' className='float-start' />
                 <h1 className='mt-1'>NuCamp</h1>
             </NavbarBrand>
 
@@ -44,10 +45,11 @@ const Header = () => {
                         </NavLink>
                     </NavItem>   
                 </Nav>
+                <UserLoginForm />
             </Collapse>
         </Navbar>
-    )
+    );
 
-}
+};
 
 export default Header;
